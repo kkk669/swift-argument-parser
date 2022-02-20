@@ -43,6 +43,7 @@ struct ArgumentDefinition {
     // `ArgumentHelp` members
     var abstract: String = ""
     var discussion: String = ""
+    var supplementalDiscussion: String = ""
     var valueName: String = ""
     var visibility: ArgumentVisibility = .default
 
@@ -78,6 +79,7 @@ struct ArgumentDefinition {
     mutating func updateArgumentHelp(help: ArgumentHelp?) {
       self.abstract = help?.abstract ?? ""
       self.discussion = help?.discussion ?? ""
+      self.supplementalDiscussion = help?.supplementalDiscussion ?? ""
       self.valueName = help?.valueName ?? ""
       self.visibility = help?.visibility ?? .default
     }
